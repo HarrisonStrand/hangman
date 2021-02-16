@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Word(props) {
-	return (
+	mreturn (
 		<>
 			<h1>{props.wordString}</h1>
 		</>

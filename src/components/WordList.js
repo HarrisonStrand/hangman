@@ -15,7 +15,7 @@ function WordList(props) {
 }
 
 WordList.propTypes = {
-  wordList: PropTypes.array
+  wordList: PropTypes.string
 };
 
 export default WordList;

@@ -9,7 +9,7 @@ function NewWordForm(props) {
 	function HandleNewWordFormSubmission(event) {
 		event.prevendDefault();
 		props.onNewWordCreation({
-			wordString: event.target.category.value.toUpperCase().split(),
+			wordString: event.target.category.value.toUpperCase(), //change to array with split
 			id: v4()
 		});
 		console.log(event.target.category.value);
@@ -26,6 +26,6 @@ function NewWordForm(props) {
 			</form>
 		</>
 	);
-
 }
+
 export default NewWordForm;
