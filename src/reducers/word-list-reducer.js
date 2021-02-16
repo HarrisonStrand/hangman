@@ -12,6 +12,9 @@ export default (state = {}, action) => {
       let newState = {...state};
       delete newState[id];
       return newState;
+		case 'DISPLAY_WORDS':
+      let newState2 = {...state};
+      return newState2;
 			default:
 				return state;
 	}

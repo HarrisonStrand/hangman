@@ -4,7 +4,8 @@ import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
   formVisibleOnPage: formVisibleReducer,
-  masterWordList: wordListReducer
+  masterWordList: wordListReducer,
+  masterWordList2: wordListReducer
 });
 
 export default rootReducer;

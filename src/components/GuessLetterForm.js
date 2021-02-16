@@ -7,7 +7,7 @@ function GuessLetterForm(props) {
   function handleGuessLetterFormSubmission(event) {
     event.preventDefault();
     props.onGuessLetter({
-
+			letterString: event.target.letterString.value.toUpperCase()
     });
   }
 

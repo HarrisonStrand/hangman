@@ -7,8 +7,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
+import initialState from './components/WordListData';
 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer,
+  initialState
+);
 
 store.subscribe(() =>
   console.log(store.getState())

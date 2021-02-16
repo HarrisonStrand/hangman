@@ -1,9 +1,10 @@
 //props for word and possibly the body???
 import React from 'react';
 import PropTypes from 'prop-types';
+import initialState from './WordListData';
 
 function Word(props) {
-	mreturn (
+	return (
 		<>
 			<h1>{props.wordString}</h1>
 		</>

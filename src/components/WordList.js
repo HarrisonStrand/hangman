@@ -4,18 +4,22 @@ import React from 'react';
 import Word from './Word';
 import PropTypes from 'prop-types';
 
+
 function WordList(props) {
+
   return (
     <>
       <Word
         wordString={props.wordString}
-        id={props.id} />
+      />
     </>
   );
 }
 
 WordList.propTypes = {
-  wordList: PropTypes.string
+  wordList: PropTypes.object,
+  onClickingDelete: PropTypes.func,
+  onClickingEdit: PropTypes.func,
 };
 
 export default WordList;
