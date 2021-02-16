@@ -1,14 +1,15 @@
 import React from 'react';
 import Banner from './Banner';
-import Item from './Item';
-import ItemControl from './ItemControl';
+import Word from './Word';
+import WordControl from './WordControl';
+import Word from './Word';
 
 function App() {
   return (
     <>
     <Banner />
-    <Item />
-    <ItemControl />
+    <Word />
+    <WordControl />
     </>
   );
 }

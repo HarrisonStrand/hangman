@@ -30,6 +30,17 @@ class WordControl extends React.Component {
 		dispatch(action2);
 	}
 
+  handleEditingWordInList = (wordToEdit) => {
+    const editedMasterWordList = this.state.editedMasterWordList
+    .filter(word => word.id !== this.state.selectedWord.id)
+    .concat(wordToEdit);
+    this.setState({
+      masterWordList: editedMasterWordList,
+      editing: false,
+      selectedWord: null,
+    });
+  }
+
 	handleClick = () => {
 		if (this.state.selectedWord != null) {
 			this.setState({
@@ -45,7 +56,7 @@ class WordControl extends React.Component {
 	}
 
 	render(){
-		
+
 
 
 
