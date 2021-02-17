@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Banner() {
+function HomePage() {
   return (
     <>
       <h1>Welcome To Hangman</h1>
@@ -8,4 +8,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default HomePage;
