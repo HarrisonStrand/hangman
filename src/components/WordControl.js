@@ -87,7 +87,7 @@ class WordControl extends React.Component {
 		} else {
 			currentlyVisibleState =
 			<WordList
-				wordList = {this.props.masterWordList}/>
+				wordList = {this.props.masterWordList2}/>
 		}
 		return (
 			<>
@@ -106,7 +106,7 @@ WordControl.propTypes = {
 
 const mapStateToProps = state => {
 	return {
-		masterWordList: state.masterWordList,
+		// masterWordList: state.masterWordList,
 		masterWordList2: state.masterWordList2,
 		formVisibleOnPage: state.formVisibleOnPage
 	}

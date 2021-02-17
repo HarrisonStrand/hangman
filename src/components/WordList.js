@@ -1,17 +1,19 @@
 //display lines for word characters and spaces
 // will display word by random generation
 import React from 'react';
-import Word from './Word';
+// import Word from './Word';
 import PropTypes from 'prop-types';
-
+import { connect } from 'react-redux';
 
 function WordList(props) {
 
   return (
     <>
-      <Word
-        wordString={props.wordString}
-      />
+    {Object.values(props.wordList).map((word) =>
+        <p>{word.wordString} 
+        id = {word.id}
+        </p>
+    )}
     </>
   );
 }

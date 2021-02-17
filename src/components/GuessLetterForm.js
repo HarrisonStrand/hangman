@@ -13,7 +13,7 @@ function GuessLetterForm(props) {
 
   return (
     <>
-      <form onSubmit = {handleGuessWordFormSubmission}>
+      <form onSubmit = {handleGuessLetterFormSubmission}>
         <input
           type='text'
           name='letter'

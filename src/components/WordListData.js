@@ -1,5 +1,3 @@
-
-
 const initialState = {
 	masterWordList2: {
 		1: {
