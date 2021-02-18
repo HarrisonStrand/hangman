@@ -3,21 +3,29 @@ import PropTypes from 'prop-types';
 
 function PlayGame(props) {
 
+  let visibleWord = props.currentRandomWord.map(letter => {
+    if (letter === " ") {
+      return "  ";
+    } else {
+      return "__  ";
+    }
+  });
+
   function handleGuessLetterFormSubmission(event) {
     event.preventDefault();
-    let word = props.currentRandomWord;
+    let randomWord = props.currentRandomWord;
     let letter = event.target.letter.value.toUpperCase();
-    if (word.includes(letter)) {
+    if (randomWord.includes(letter)) {
       console.log("Hello");
-			console.log(word);
-      console.log(props.currentVisibleWord);
+			console.log(randomWord);
+      console.log(visibleWord);
     }
   }
 
   return (
     <>
       <h1>Hangman</h1>
-      <p>{props.currentVisibleWord}</p>
+      <p>{visibleWord}</p>
 			<form onSubmit = {handleGuessLetterFormSubmission}>
         <input
           type='text'

@@ -5,7 +5,6 @@ import PlayGame from './PlayGame';
 import { connect } from 'react-redux';
 import { randomWord } from './WordData';
 
-
 class WordControl extends React.Component {
 
 		constructor(props) {
@@ -29,21 +28,18 @@ class WordControl extends React.Component {
 		dispatch(action);
 	}
 
-	// function visibleWord() {
-	// 	let word = randomWord();
+
+  // guessedWord() {
+  //   return this.state.answer.split("").map(letter => (this.state.guessed.has(letter) ? letter : " _ "));
+  // }
+
+	// handleCreateVisibleWord() {
+	// 	let word = this.state.randomWord;
 	// 	word = word.join('');
 	// 	let regex = (/[A-Za-z]/g);
 	// 	let editedWord = word.replace(regex, "_");
 	// 	return editedWord.split('');
 	// }
-
-	handleCreateVisibleWord = () => {
-		let word = this.state.randomWord;
-		word = word.join('');
-		let regex = (/[A-Za-z]/g);
-		let editedWord = word.replace(regex, "_");
-		return editedWord.split('');
-	}
 
 	render(){
 		let currentlyVisibleState = null;
@@ -56,7 +52,7 @@ class WordControl extends React.Component {
 			currentlyVisibleState =
 			<PlayGame 
 				currentRandomWord = {this.state.randomWord}
-				currentVisibleWord = {this.handleCreateVisibleWord}
+				// currentVisibleWord = {this.handleCreateVisibleWord}
 				resetButton = {this.resetButton} />
 			buttonText = "Back To Home";
 		}
