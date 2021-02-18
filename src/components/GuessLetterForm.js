@@ -17,7 +17,7 @@ function GuessLetterForm(props) {
         <input
           type='text'
           name='letter'
-          placeholder='Guess letter' />
+          placeholder='Letter' />
         <button class='guess-letter' type='submit'>GUESS LETTER</button>
       </form>
     </>

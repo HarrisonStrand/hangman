@@ -15,12 +15,34 @@ class WordControl extends React.Component {
 		}
 	}
 
+	resetButton = () => {
+		this.setState({
+			randomWord: randomWord()
+		});
+	}
+
 	handleClick = () => {
 		const { dispatch } = this.props;
 		const action = {
 		type: 'TOGGLE_PLAY'
 		}
 		dispatch(action);
+	}
+
+	// function visibleWord() {
+	// 	let word = randomWord();
+	// 	word = word.join('');
+	// 	let regex = (/[A-Za-z]/g);
+	// 	let editedWord = word.replace(regex, "_");
+	// 	return editedWord.split('');
+	// }
+
+	handleCreateVisibleWord = () => {
+		let word = this.state.randomWord;
+		word = word.join('');
+		let regex = (/[A-Za-z]/g);
+		let editedWord = word.replace(regex, "_");
+		return editedWord.split('');
 	}
 
 	render(){
@@ -32,7 +54,10 @@ class WordControl extends React.Component {
 			buttonText = "Play";
 		} else {
 			currentlyVisibleState =
-			<PlayGame />
+			<PlayGame 
+				currentRandomWord = {this.state.randomWord}
+				currentVisibleWord = {this.handleCreateVisibleWord}
+				resetButton = {this.resetButton} />
 			buttonText = "Back To Home";
 		}
 		return (

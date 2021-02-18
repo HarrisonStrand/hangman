@@ -3,7 +3,9 @@ const masterWordList2 = ['ELEPHANT', 'HELLO', 'LAVA LAMP', 'Supercalifragilistic
 
 
 function randomWord() {
-  return masterWordList2[Math.floor(Math.random() * masterWordList2.length)];
+  return masterWordList2[Math.floor(Math.random() * masterWordList2.length)].split('');
 }
+
+
 
 export { randomWord };
