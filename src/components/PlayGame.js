@@ -5,11 +5,13 @@ function PlayGame(props) {
 
   let visibleWord = props.currentRandomWord.map(letter => {
     if (letter === " ") {
-      return "  ";
+      return "       ";
     } else {
-      return "__  ";
+      return " ___  ";
     }
   });
+
+  let guessesLeft = 6;
 
   function handleGuessLetterFormSubmission(event) {
     event.preventDefault();
@@ -19,6 +21,9 @@ function PlayGame(props) {
       console.log("Hello");
 			console.log(randomWord);
       console.log(visibleWord);
+    } else {
+      guessesLeft--;
+      console.log("You have " + guessesLeft + " guesses left");
     }
   }
 
